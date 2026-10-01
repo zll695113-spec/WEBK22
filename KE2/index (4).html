@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Little Memory 💙</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="album">
+
+    <!-- MUSIC -->
+    <div class="music-bar">
+      <button class="music-btn" id="musicBtn">▶</button>
+      <span id="musicText">PLAY OUR SONG 🎵</span>
+      <button class="tiny-btn" id="changeSong">Ganti lagu</button>
+      <audio id="song" loop></audio>
+    </div>
+
+    <!-- 01 COVER -->
+    <section class="page cover active" data-page="0">
+      <div class="stars">✦　⋆　✧　⋆　✦</div>
+      <div class="tape"></div>
+
+      <div class="cover-card paper">
+        <p class="eyebrow">A DIGITAL SCRAPBOOK</p>
+        <h1>MOMEN<br><span>ABADI</span> 💙</h1>
+        <p class="subtitle">beberapa foto, banyak cerita.</p>
+
+        <div class="cover-polaroid">
+          <img src="foto1.jpeg" alt="Foto kenangan" onerror="this.src='https://picsum.photos/500/500?random=1'">
+          <small>Foto kenangan our little memory ♡</small>
+        </div>
+
+        <p class="date">29 • 09 • 2026</p>
+        <div class="heart-row">♡　♡　♡</div>
+        <button class="next-btn" data-next>mulai cerita →</button>
+      </div>
+    </section>
+
+    <!-- 02 AWAL CERITA -->
+    <section class="page paper-page" data-page="1">
+      <div class="page-head">
+        <span>02</span>
+        <h2>AWAL CERITA</h2>
+        <span>♡</span>
+      </div>
+
+      <p class="intro-text">
+        Dari hal-hal sederhana, ternyata lahir begitu banyak kenangan.
+      </p>
+
+      <div class="scrap-grid two">
+        <figure class="photo tilt-left">
+          <img src="foto2.jpeg" alt="First little memory" onerror="this.src='https://picsum.photos/600/500?random=2'">
+          <figcaption>first little memory</figcaption>
+        </figure>
+
+        <figure class="photo tilt-right">
+          <img src="foto3.jpeg" alt="One ordinary day" onerror="this.src='https://picsum.photos/600/500?random=3'">
+          <figcaption>one ordinary day</figcaption>
+        </figure>
+      </div>
+
+      <p class="hand-note">“ternyata yang sederhana bisa terasa spesial.”</p>
+      <button class="next-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 03 OUR LITTLE MOMENTS -->
+    <section class="page blue-page" data-page="2">
+      <div class="page-head light">
+        <span>03</span>
+        <h2>OUR LITTLE MOMENTS</h2>
+        <span>✦</span>
+      </div>
+
+      <p class="intro-text light">
+        ketawa, ngobrol, bercanda, dan hal-hal kecil yang selalu bikin senyum.
+      </p>
+
+      <div class="scrap-grid three">
+        <figure class="photo">
+          <img src="foto4.jpeg" alt="Hehe" onerror="this.src='https://picsum.photos/500/600?random=4'">
+          <figcaption>hehe</figcaption>
+        </figure>
+
+        <figure class="photo tall">
+          <img src="foto5.jpeg" alt="Random day" onerror="this.src='https://picsum.photos/600/700?random=5'">
+          <figcaption>random day</figcaption>
+        </figure>
+
+        <figure class="photo">
+          <img src="foto6.jpeg" alt="Little things" onerror="this.src='https://picsum.photos/500/600?random=6'">
+          <figcaption>little things</figcaption>
+        </figure>
+      </div>
+
+      <div class="doodle">✎ ☆ ♡ ☁</div>
+      <button class="next-btn light-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 04 RANDOM BUT PRECIOUS -->
+    <section class="page blue-page" data-page="3">
+      <div class="page-head light">
+        <span>04</span>
+        <h2>RANDOM BUT PRECIOUS</h2>
+        <span>☁</span>
+      </div>
+
+      <p class="intro-text light">
+        nggak harus sempurna untuk menjadi kenangan yang berharga.
+      </p>
+
+      <div class="random-layout">
+        <figure class="photo polaroid p1">
+          <img src="foto7.jpeg" alt="Random but precious" onerror="this.src='https://picsum.photos/600/600?random=7'">
+          <figcaption>“lah kok gini 😭”</figcaption>
+        </figure>
+
+        <figure class="photo polaroid p2">
+          <img src="foto8.jpeg" alt="HAHA" onerror="this.src='https://picsum.photos/600/600?random=8'">
+          <figcaption>random but precious</figcaption>
+        </figure>
+
+        <div class="sticker s1">HAHA</div>
+        <div class="sticker s2">♡</div>
+        <div class="sticker s3">✦</div>
+      </div>
+
+      <button class="next-btn light-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 05 PESAN -->
+    <section class="page letter-page" data-page="4">
+      <div class="page-head">
+        <span>05</span>
+        <h2>PESAN</h2>
+        <span>✉</span>
+      </div>
+
+      <article class="letter">
+        <div class="letter-top">DEAR YOU,</div>
+
+        <p>
+          Biru adalah caraku mencintaimu.
+        </p>
+
+        <p>
+          Bukan biru yang terang sebagai langit tanpa awan, melainkan biru yang luas dan dalam;
+          warna yang menyimpan banyak hal tanpa perlu menjelaskannya. Seperti dirimu, yang tidak
+          mudah dipahami, tetapi selalu ingin aku dekati.
+        </p>
+
+        <p>
+          Aku mencintaimu bukan hanya pada hari-hari ketika segalanya berjalan baik. Bukan hanya
+          saat tawamu lepas atau saat dunia sedang berpihak kepadamu. Aku juga mencintaimu pada
+          hari-hari yang lebih sunyi, ketika kesedihan membuatmu memilih diam atau bahkan ketika
+          telah menjadikanmu asing bahkan bagi dirimu sendiri.
+        </p>
+
+        <p>
+          Ada bagian-bagian dari dirimu yang mungkin tidak kamu sukai. Sifat yang kadang terlalu
+          keras, luka lama yang belum benar-benar sembuh, atau kenangan yang sesekali kembali dan
+          membuatmu berubah. Namun aku tidak pernah melihatnya sebagai alasan untuk pergi. Sebab
+          cinta, setidaknya bagiku, bukan tentang memilih hal yang indah lalu mengabaikan sisanya.
+        </p>
+
+        <p>
+          Aku ingin mengenal seluruh musim dalam dirimu.
+        </p>
+
+        <div class="signature">— from someone who remembers ♡</div>
+      </article>
+
+      <button class="next-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 06 FOTO FAVORIT -->
+    <section class="page favorite-page" data-page="5">
+      <div class="page-head">
+        <span>06</span>
+        <h2>FOTO FAVORIT</h2>
+        <span>♡</span>
+      </div>
+
+      <div class="favorite-polaroid">
+        <img src="foto9.jpeg" alt="Foto favorit" onerror="this.src='https://picsum.photos/700/700?random=9'">
+        <div class="favorite-caption">
+          kalau waktu bisa diulang, aku tetap memilih momen ini.
+        </div>
+      </div>
+
+      <div class="blue-flower">✿ ❀ ✿</div>
+      <button class="next-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 07 FUNNY MEMORIES -->
+    <section class="page funny-page" data-page="6">
+      <div class="page-head">
+        <span>07</span>
+        <h2>FUNNY MEMORIES</h2>
+        <span>😭</span>
+      </div>
+
+      <p class="intro-text">
+        ternyata kita pernah selucu ini 😭💙
+      </p>
+
+      <div class="funny-grid">
+        <figure class="photo polaroid">
+          <img src="foto10.jpeg" alt="Funny memory" onerror="this.src='https://picsum.photos/700/600?random=10'">
+          <figcaption>put your phone down dawg 😭</figcaption>
+        </figure>
+
+        <div class="mini-note">NO SERIOUS MOMENTS ALLOWED ✦</div>
+      </div>
+
+      <button class="next-btn" data-next>lanjut →</button>
+    </section>
+
+    <!-- 08 THANK YOU -->
+    <section class="page thank-page" data-page="7">
+      <div class="page-head">
+        <span>08</span>
+        <h2>THANK YOU</h2>
+        <span>🌷</span>
+      </div>
+
+      <div class="thank-layout">
+        <figure class="photo flower-photo">
+          <img src="foto11.jpeg" alt="Bunga" onerror="this.src='https://picsum.photos/600/700?random=11'">
+          <figcaption>Bunga</figcaption>
+        </figure>
+
+        <div class="thank-card">
+          <div class="tiny-stars">✦ ✧ ✦</div>
+          <p>
+            Terima kasih sudah menjadi bagian dari cerita yang ingin selalu aku ingat.
+          </p>
+          <div class="big-heart">♡</div>
+          <strong>Kenangan</strong>
+        </div>
+
+        <figure class="photo flower-photo small">
+          <img src="foto12.jpeg" alt="Kenangan" onerror="this.src='https://picsum.photos/500/500?random=12'">
+          <figcaption>♡</figcaption>
+        </figure>
+      </div>
+
+      <button class="next-btn" data-next>penutup →</button>
+    </section>
+
+    <!-- 09 END -->
+    <section class="page closing" data-page="8">
+      <div class="constellation">
+        ✦　⋆　✧　⋆　✦<br>
+        ⋆　♡　⋆　♡　⋆
+      </div>
+
+      <h2>
+        THE END OF THIS PAGE<br>
+        <span>END? NO.</span><br>
+        JUST ANOTHER PAGE<br>
+        OF OUR STORY. 💙
+      </h2>
+
+      <div class="closing-buttons">
+        <button class="action-btn" id="restart">↩ START FROM BEGINNING</button>
+        <button class="action-btn secondary" id="prevBtn">‹ KEMBALI</button>
+      </div>
+
+      <p class="edit-tip">
+        Semua foto, tanggal, teks, warna, dan lagu bisa kamu ganti dari file website ini.
+      </p>
+    </section>
+
+  </main>
+
+  <div class="dots" id="dots"></div>
+
+  <div class="nav-arrows">
+    <button id="prev">‹</button>
+    <button id="next">›</button>
+  </div>
+
+  <script>
+    const pages = [...document.querySelectorAll(".page")];
+    const dots = document.getElementById("dots");
+    let current = 0;
+
+    pages.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "dot" + (i === 0 ? " active" : "");
+      dot.addEventListener("click", () => showPage(i));
+      dots.appendChild(dot);
+    });
+
+    const dotEls = [...document.querySelectorAll(".dot")];
+
+    function showPage(index) {
+      current = Math.max(0, Math.min(index, pages.length - 1));
+
+      pages.forEach((page, i) => {
+        page.classList.toggle("active", i === current);
+      });
+
+      dotEls.forEach((dot, i) => {
+        dot.classList.toggle("active", i === current);
+      });
+    }
+
+    function nextPage() {
+      showPage(current + 1);
+    }
+
+    function prevPage() {
+      showPage(current - 1);
+    }
+
+    document.querySelectorAll("[data-next]").forEach(btn => {
+      btn.addEventListener("click", nextPage);
+    });
+
+    document.getElementById("next").addEventListener("click", nextPage);
+    document.getElementById("prev").addEventListener("click", prevPage);
+    document.getElementById("prevBtn").addEventListener("click", prevPage);
+
+    document.getElementById("restart").addEventListener("click", () => {
+      showPage(0);
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight") nextPage();
+      if (e.key === "ArrowLeft") prevPage();
+    });
+
+    /* MUSIC */
+    const song = document.getElementById("song");
+    const musicBtn = document.getElementById("musicBtn");
+    const musicText = document.getElementById("musicText");
+    const changeSong = document.getElementById("changeSong");
+
+    let musicPlaying = false;
+
+    musicBtn.addEventListener("click", async () => {
+      if (!song.src) {
+        alert("Masukkan file lagu terlebih dahulu, misalnya: lagu.mp3");
+        return;
+      }
+
+      if (song.paused) {
+        await song.play();
+        musicPlaying = true;
+        musicBtn.textContent = "❚❚";
+        musicText.textContent = "NOW PLAYING 🎵";
+      } else {
+        song.pause();
+        musicPlaying = false;
+        musicBtn.textContent = "▶";
+        musicText.textContent = "PLAY OUR SONG 🎵";
+      }
+    });
+
+    changeSong.addEventListener("click", () => {
+      alert("Untuk mengganti lagu, ubah nama file pada tag audio di index.html.");
+    });
+  </script>
+</body>
+</html>

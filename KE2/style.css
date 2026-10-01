@@ -1,0 +1,106 @@
+*{box-sizing:border-box}
+:root{
+  --navy:#071a49;--blue:#8fc9f4;--baby:#dff3ff;--white:#fff;
+  --ink:#17264b;--paper:#fdfcff;--shadow:0 18px 50px rgba(3,18,55,.20)
+}
+html,body{margin:0;padding:0;min-height:100%;font-family:Poppins,sans-serif;background:#071a49;color:var(--ink)}
+body{overflow:hidden}
+button{font:inherit;border:0;cursor:pointer}
+.album{height:100vh;width:100%;position:relative}
+.page{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 22px 55px;opacity:0;visibility:hidden;transform:translateX(40px) scale(.98);transition:opacity .55s ease,transform .65s cubic-bezier(.2,.8,.2,1),visibility .55s}
+.page.active{opacity:1;visibility:visible;transform:translateX(0) scale(1)}
+.cover{background:radial-gradient(circle at 20% 20%,#5b9fd7 0,#183d7c 34%,#071a49 75%);overflow:hidden}
+.cover:before,.blue-page:before,.closing:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:38px 38px;opacity:.13;pointer-events:none}
+.paper{background:rgba(255,255,255,.96);box-shadow:var(--shadow);border-radius:24px}
+.cover-card{position:relative;width:min(520px,92vw);padding:26px 25px 20px;text-align:center;transform:rotate(-1deg)}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;font-weight:700;color:#6683aa;margin:0 0 8px}
+.cover h1{font-size:clamp(3rem,13vw,6rem);line-height:.82;margin:8px 0 14px;color:var(--navy);letter-spacing:-.06em}
+.cover h1 span{color:#4c9fe0}
+.subtitle{font-family:Caveat,cursive;font-size:1.7rem;margin:0 0 18px;color:#49628a}
+.cover-polaroid{width:min(290px,78vw);margin:auto;background:#fff;padding:10px 10px 17px;box-shadow:0 12px 25px rgba(0,0,0,.15);transform:rotate(2deg)}
+.cover-polaroid img{width:100%;height:250px;object-fit:cover;display:block}
+.cover-polaroid small{font-family:Caveat,cursive;font-size:1.2rem;color:#4a5871}
+.date{font-weight:600;letter-spacing:.1em;margin:18px 0 4px}
+.heart-row{color:#5aa5df;font-size:1.3rem}
+.stars,.constellation{position:absolute;top:42px;color:white;letter-spacing:.3em;font-size:1.2rem;opacity:.85}
+.tape{position:absolute;width:125px;height:35px;background:rgba(220,239,250,.65);transform:rotate(-17deg);top:65px;left:20px;z-index:2}
+.next-btn{margin-top:22px;background:var(--navy);color:white;padding:11px 20px;border-radius:999px;box-shadow:0 7px 18px rgba(4,20,60,.18);z-index:5}
+.next-btn:hover,.action-btn:hover{transform:translateY(-2px)}
+.paper-page,.letter-page,.favorite-page,.funny-page,.thank-page{background:linear-gradient(135deg,#f8fbff,#dff3ff)}
+.paper-page:after,.letter-page:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(70,130,170,.05) 1px,transparent 1px);background-size:100% 24px;pointer-events:none}
+.page-head{display:flex;align-items:center;justify-content:space-between;width:min(760px,94vw);position:relative;z-index:2;color:var(--navy)}
+.page-head h2{font-size:clamp(1.35rem,5vw,2.2rem);letter-spacing:.04em;margin:0;text-align:center}
+.page-head span{font-family:Caveat,cursive;font-size:1.4rem}
+.intro-text,.caption{max-width:680px;text-align:center;position:relative;z-index:2;font-family:Caveat,cursive;font-size:1.45rem;margin:14px 0 20px}
+.scrap-grid{width:min(760px,94vw);display:grid;gap:18px;position:relative;z-index:2}
+.scrap-grid.two{grid-template-columns:repeat(2,1fr)}
+.scrap-grid.three{grid-template-columns:1fr 1.15fr 1fr;align-items:center}
+.photo{background:#fff;padding:10px 10px 28px;box-shadow:0 13px 26px rgba(15,53,100,.16);position:relative}
+.photo img{display:block;width:100%;height:230px;object-fit:cover}
+.photo.tall img{height:300px}
+.photo figcaption{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-family:Caveat,cursive;font-size:1.15rem;color:#44516b}
+.tilt-left{transform:rotate(-3deg)}.tilt-right{transform:rotate(3deg)}
+.hand-note{font-family:Caveat,cursive;font-size:1.35rem;color:#527da5;transform:rotate(-2deg);margin-top:12px;z-index:2}
+.doodle{font-family:Caveat,cursive;font-size:1.7rem;color:#5b9fd7;position:absolute;right:8%;bottom:18%;transform:rotate(-8deg)}
+.blue-page{background:linear-gradient(150deg,#0b2b69,#4e9bd0);color:white;overflow:hidden}
+.light{color:white}.light-btn{background:white;color:var(--navy)}
+.random-layout{position:relative;width:min(650px,92vw);height:430px;z-index:2}
+.polaroid{padding:10px 10px 32px}
+.polaroid img{height:300px}
+.p1{position:absolute;width:44%;left:5%;top:35px;transform:rotate(-6deg)}
+.p2{position:absolute;width:44%;right:5%;top:5px;transform:rotate(6deg)}
+.sticker{position:absolute;border-radius:50%;padding:12px;background:#e4f6ff;color:#174a76;font-weight:700;box-shadow:0 8px 15px rgba(0,0,0,.12)}
+.s1{left:45%;bottom:15px;transform:rotate(-8deg)}.s2{right:1%;bottom:80px;font-size:2rem;background:#fff0f7}.s3{left:4%;top:5px;font-size:1.7rem}
+.letter{width:min(700px,94vw);max-height:62vh;overflow:auto;background:#fffdf8;border:1px solid #dce7ef;box-shadow:var(--shadow);padding:30px 28px;border-radius:4px;position:relative;z-index:2;background-image:repeating-linear-gradient(#fffdf8,#fffdf8 31px,#e6f0f6 32px)}
+.letter p{font-family:Caveat,cursive;font-size:1.34rem;line-height:1.38;margin:0 0 12px}
+.letter-top{font-weight:700;color:#477ea9;letter-spacing:.12em;margin-bottom:18px}
+.signature{text-align:right;font-family:Caveat,cursive;font-size:1.25rem;color:#477ea9;margin-top:15px}
+.favorite-page{background:linear-gradient(145deg,#dff3ff,#fff)}
+.favorite-polaroid{width:min(520px,86vw);background:white;padding:14px 14px 45px;box-shadow:var(--shadow);transform:rotate(-2deg);position:relative;z-index:2}
+.favorite-polaroid img{width:100%;height:min(58vh,430px);object-fit:cover}
+.favorite-caption{font-family:Caveat,cursive;font-size:1.5rem;text-align:center;color:#496987;margin-top:10px}
+.blue-flower{font-size:2rem;color:#3c91cf;margin-top:16px}
+.funny-page{background:#eef9ff}
+.funny-grid{position:relative;width:min(620px,90vw);height:440px;z-index:2}
+.funny-grid .polaroid{position:absolute;width:min(430px,72vw);left:50%;top:10px;transform:translateX(-50%) rotate(-4deg)}
+.funny-grid .polaroid img{height:330px}
+.mini-note{position:absolute;right:0;bottom:10px;background:#fff;padding:12px 15px;box-shadow:0 7px 18px rgba(0,0,0,.12);font-weight:700;font-size:.75rem;transform:rotate(4deg)}
+.thank-page{background:linear-gradient(145deg,#fff,#dff3ff)}
+.thank-layout{width:min(760px,92vw);height:440px;position:relative;z-index:2}
+.flower-photo{position:absolute;width:48%;left:0;top:35px;transform:rotate(-4deg)}
+.flower-photo img{height:350px}
+.flower-photo.small{width:35%;right:0;left:auto;top:130px;transform:rotate(5deg)}
+.flower-photo.small img{height:240px}
+.thank-card{position:absolute;left:28%;top:85px;width:45%;background:#fff;padding:28px 22px;text-align:center;box-shadow:var(--shadow);transform:rotate(2deg)}
+.thank-card p{font-family:Caveat,cursive;font-size:1.55rem;line-height:1.15}.tiny-stars{color:#5c9fd0}.big-heart{font-size:3rem;color:#4d9cd2}
+.closing{background:radial-gradient(circle at 50% 20%,#173e80,#071a49 60%);color:white;text-align:center;overflow:hidden}
+.closing .constellation{top:45px;left:50%;transform:translateX(-50%);width:100%;line-height:2}
+.closing h2{font-size:clamp(2rem,8vw,4.3rem);line-height:1.02;letter-spacing:-.03em;z-index:2;position:relative;margin:20px 0}
+.closing h2 span{color:#8fd3ff}
+.closing-buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;z-index:2}
+.action-btn{background:#8fd3ff;color:#08204f;padding:13px 18px;border-radius:999px;font-weight:700;transition:.2s}
+.action-btn.secondary{background:rgba(255,255,255,.14);color:white;border:1px solid rgba(255,255,255,.3)}
+.edit-tip{position:absolute;bottom:30px;max-width:90vw;font-size:.72rem;opacity:.7;z-index:2}
+.music-bar{position:fixed;right:15px;top:15px;z-index:100;background:rgba(255,255,255,.94);border-radius:999px;padding:6px 9px;display:flex;align-items:center;gap:7px;box-shadow:0 8px 24px rgba(0,0,0,.15);font-size:.72rem}
+.music-btn{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff}
+.tiny-btn{background:#e8f5ff;color:#1d5481;padding:7px 10px;border-radius:999px;font-size:.68rem}
+.dots{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:100;display:flex;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:.25s}
+.dot.active{width:22px;border-radius:8px;background:#fff}
+.nav-arrows{position:fixed;bottom:45px;right:15px;z-index:100;display:flex;gap:6px}
+.nav-arrows button{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--navy);font-size:1.6rem;box-shadow:0 5px 15px rgba(0,0,0,.12)}
+.editable{outline:none}
+@media(max-width:650px){
+  .music-bar{left:10px;right:10px;top:9px;justify-content:center}
+  .music-bar #musicText{display:none}
+  .page{padding-top:70px}
+  .scrap-grid.three{grid-template-columns:1fr 1fr}
+  .scrap-grid.three .tall{grid-column:span 2}
+  .photo img{height:190px}.photo.tall img{height:260px}
+  .random-layout{height:360px}.p1,.p2{width:48%}.p1{left:0}.p2{right:0}.polaroid img{height:235px}
+  .letter{max-height:58vh;padding:23px 19px}.letter p{font-size:1.18rem}
+  .favorite-polaroid img{height:48vh}
+  .thank-layout{height:370px}.flower-photo{width:52%}.flower-photo img{height:290px}.flower-photo.small{width:40%;top:150px}.flower-photo.small img{height:190px}.thank-card{left:25%;width:52%;top:80px}.thank-card p{font-size:1.3rem}
+  .funny-grid{height:360px}.funny-grid .polaroid img{height:260px}
+  .closing h2{margin-top:45px}
+}
